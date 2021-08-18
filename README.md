@@ -84,7 +84,7 @@ pip install -r requirements.txt
 
 ```
 
-2. Put the image you want to simulate in the ".\img\" folder
+2. Put the image you want to simulate in the ".\img\" folder, and change the `target_image_path` in `main.py`
 
 3. Run main.py using
 
