@@ -98,8 +98,8 @@ The paths to the target image and output directory are hard-coded, but can easil
 routine.
 
 ```python
-    target_image_path = "./img/starry_night_half.jpg"
-    checkpoint_path = "./starry_night/"
+    target_image_path = "./image/lamp.png"
+    checkpoint_path = "./output2/"
 ```
 
 
