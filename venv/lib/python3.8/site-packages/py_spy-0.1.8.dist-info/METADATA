@@ -1,0 +1,20 @@
+Metadata-Version: 2.0
+Name: py-spy
+Version: 0.1.8
+Summary: A Sampling Profiler for Python
+Home-page: https://github.com/benfred/py-spy
+Author: Ben Frederickson
+Author-email: ben@benfrederickson.com
+License: GPL
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 2
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Utilities
+
+UNKNOWN
+
+

@@ -99,7 +99,7 @@ routine.
 
 ```python
     target_image_path = "./image/lamp.png"
-    checkpoint_path = "./output2/"
+    checkpoint_path = "./output/"
 ```
 
 

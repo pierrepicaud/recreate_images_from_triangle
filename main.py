@@ -20,7 +20,8 @@ def score(x: Painting) -> float:
 def pick_best_and_random(pop, maximize=False):
     evaluated_individuals = tuple(filter(lambda x: x.fitness is not None, pop))
     if len(evaluated_individuals) > 0:
-        mom = max(evaluated_individuals, key=lambda x: x.fitness if maximize else -x.fitness)
+        mom = max(evaluated_individuals,
+                  key=lambda x: x.fitness if maximize else -x.fitness)
     else:
         mom = random.choice(pop)
     dad = random.choice(pop)
@@ -77,8 +78,10 @@ class Population:
         for _ in range(abs(self.sample_size - len(self.pop))):
             self.pop.append(Chromosome(generator))
 
-        self.avg_fitness = sum(i.fitness for i in self.pop) / float(len(self.pop))
-        print(f"Population with {self.sample_size} members created in {(time.time() - start_time):.2f} seconds")
+        self.avg_fitness = sum(
+            i.fitness for i in self.pop) / float(len(self.pop))
+        print(
+            f"Population with {self.sample_size} members created in {(time.time() - start_time):.2f} seconds")
 
     # Calculate the difference between the fitness score of 2 chromosomes
     def get_gain(self):
@@ -95,7 +98,8 @@ class Population:
             self.rememberer = 0
 
         if self.rememberer == threshold:
-            raise Exception(f"No Gain found in the last {self.rememberer} generation")
+            raise Exception(
+                f"No Gain found in the last {self.rememberer} generation")
 
     # Survive: Eliminate a percentage of the population based on their fitness score
     def eliminate(self, survival_rate: float = 0.025):
@@ -143,7 +147,7 @@ class Population:
 
     def print_summary(self):
         # checkpoint_path = "/home/erklarungsnot/PycharmProjects/ai_ga_art_ass2/output/"
-        checkpoint_path = "./output2/"
+        checkpoint_path = "./output/"
         image_template = os.path.join(checkpoint_path, "drawing_%05d.png")
 
         # if self.generation_count % 50 == 0:
@@ -158,7 +162,7 @@ class Population:
 
 if __name__ == "__main__":
     # Program settings
-    target_image_path = "./image/lamp.png"
+    target_image_path = "./image/lamp.jpg"
     # target_image_path = "./image/girl.png"
     # target_image_path = "./image/v.gordeev.png"
     # target_image_path = "./image/head.jpg"
@@ -177,7 +181,8 @@ if __name__ == "__main__":
     sigma = 1
 
     # Creating initial population rgb(37, 150, 190)
-    pop = Population(Painting(num_triangles, target_image, background_color=(0, 0, 1)), population_size)
+    pop = Population(Painting(num_triangles, target_image,
+                     background_color=(0, 0, 1)), population_size)
 
     # 200 generations
     pop.evolve(generation=e_step, survival_rate=s_rate, selection_method=pick_best_and_random, mating_method=mate,

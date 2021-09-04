@@ -1,0 +1,16 @@
+Metadata-Version: 2.0
+Name: imgcompare
+Version: 0.1.0
+Summary: compares two images for equality or a difference percentage
+Home-page: https://github.com/datenhahn/imgcompare
+Author: Jonas Hahn
+Author-email: jonas.hahn@datenhahn.de
+License: MIT
+Download-URL: https://github.com/datenhahn/imgcompare/tarball/0.1.0
+Keywords: image,compare
+Platform: UNKNOWN
+Requires-Dist: pillow
+
+UNKNOWN
+
+
